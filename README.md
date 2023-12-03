@@ -1,1 +1,3 @@
 Like my other repo, this will be where I try my hand at some GPT prompts to stumble my way through Python. Figured this would be a great way to start my Python journey as I have 0/206 bones that are creative inside my body. If this repo literally EVER gets viewed by someone other than myself, I hope you enjoy what you find.
+
+What I hope to accomplish with my learning Python is to eventually gather enough knowledge to rewrite my unfinished game in Python as I believe it will be both easier and much more legible. I suppose we shall see how long that takes (I bet uhhhhhhhhh 3 months of on/off learning). Starting on 02 Dec 2023.
