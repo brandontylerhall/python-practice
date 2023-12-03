@@ -10,7 +10,7 @@ sentence = input('> ')
 def reverse_sentence(sent):
     list_sent = sent.split()[::-1]
     rev_sent = ' '.join(list_sent)
-    print(rev_sent)
+    print(rev_sent.capitalize())
 
 
 reverse_sentence(sentence)
