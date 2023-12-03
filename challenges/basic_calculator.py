@@ -1,6 +1,8 @@
 """
     Create a basic calculator that takes two numbers and an operator
     (+, -, *, /) as input and performs the corresponding operation.
+
+    UPDATE: adding a factorial equation
 """
 
 
@@ -28,13 +30,24 @@ def divide():
     print(f'Your answer is {int(a / b)}')
 
 
+def factorial():
+    num = int(input('What number do you want a factorial of: '))
+    f = num
+    fa = 1
+    while f > 0:
+        fa = fa * f
+        f = f - 1
+    print(f'The factorial of {num} is {fa}')
+
+
 while True:
     print('Choose the number of the operation you would like to perform\n'
           '1. Addition\n'
           '2. Subtraction\n'
           '3. Multiplication\n'
           '4. Division\n'
-          '5. Quit')
+          '5. Factorial \n'
+          '6. Quit')
     user_input = int(input('> '))
 
     match user_input:
@@ -51,5 +64,8 @@ while True:
             divide()
 
         case 5:
+            factorial()
+
+        case 6:
             print('Bye!')
             quit()
