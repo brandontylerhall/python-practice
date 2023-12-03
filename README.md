@@ -1,0 +1,1 @@
+Like my other repo, this will be where I try my hand at some GPT prompts to stumble my way through Python. Figured this would be a great way to start my Python journey as I have 0/206 bones that are creative inside my body. If this repo literally EVER gets viewed by someone other than myself, I hope you enjoy what you find.
