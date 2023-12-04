@@ -3,16 +3,18 @@
     The sequence should end when it reaches 1.
 """
 
-inp = 9
 
 def collatz(num):
+    print(num)
+    if num == 1:
+        return
     if num % 2 == 0:
-        num /= 2
-        print(num)
-    if num % 3 == 0:
+        num //= 2
+        collatz(num)
+    elif num % 2 == 1:
         num = (num * 3) + 1
-        print(num)
+        collatz(num)
 
 
-while inp > 1:
-    collatz(inp)
+inp = int(input('Enter a number: '))
+collatz(inp)
