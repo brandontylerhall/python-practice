@@ -3,18 +3,27 @@
     by shifting each letter by a certain number of positions in the alphabet.
 """
 
+
+def caesar_cipher(text, shift, direction):
+    result = ""
+    for char in text:
+        if char.isalpha():  # check if the character is a letter
+            if char.isupper():  # check if the character is uppercase
+                # ord() takes a single unicode letter and returns the numerical value of that character
+                # e.g. ord('a') returns 97
+                result += chr((ord(char) - ord('A' if direction == 'left' else 'a') - shift) % 26 + ord('A'))
+            else:  # does this if lowercase
+                result += chr((ord(char) - ord('a') + shift) % 26 + ord('a'))
+        else:
+            # if character is not a letter (e.g. space) it adds it to the string unchanged
+            result += char
+    return result
+
+
 user_in = input('Enter the word or phrase you wish to encrypt: \n')
-shift = int(input('How many letters over do you want to shift your phrase: \n'))
-left_right = input(f'Do you want to shift the characters in your phrase {shift} to the left or to the right \n')
+encrypt = int(input('How many letters over do you want to shift your phrase: \n'))
+left_right = input('Do you want to shift the characters in your phrase to the left or to the right: \n')
 
-
-def caesar(inp, l_r, opt):
-    if l_r == 'left':
-        return ''.join(chr((ord(char) - 97 - opt) % 26 + 97) for char in inp)
-    elif l_r == 'right':
-        return ''.join(chr((ord(char) - 97 + opt) % 26 + 97) for char in inp)
-
-
-new_phrase = caesar(user_in, left_right, shift)
-print(f'Your new phrase is: {new_phrase} \n'
-      f'The characters were shifted {shift} times')
+new_phrase = caesar_cipher(user_in, encrypt, left_right)
+print(f'Your new phrase is: {new_phrase}\n'
+      f'The characters were shifted {encrypt} times to the {left_right}.')
