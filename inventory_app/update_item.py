@@ -7,7 +7,7 @@ def update_item(item_name):
     # Read the CSV file into a DataFrame
     df = pd.read_csv(filename)
 
-    choice = input("What would you like to update?\n"
+    choice = input("Would you like to update the price or the quantity?\n"
                    "> ").lower()
     if choice == 'price':
         new_price = float(input("What is the new price?\n"
