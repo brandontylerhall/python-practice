@@ -5,3 +5,4 @@ settings.py
 *.pot
 *.pyc
 .idea/
+inventory_app/inventory.csv
