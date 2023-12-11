@@ -22,3 +22,4 @@ def update_item(item_name):
 
     # Write the modified DataFrame back to the CSV file
     df.to_csv(filename, index=False)
+    print(f'Data has been updated successfully.')

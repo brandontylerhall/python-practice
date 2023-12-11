@@ -5,3 +5,5 @@ def add_item(writer):
     user_data = [item_name, price, quantity]
 
     writer.writerow(user_data)
+
+    print('Data has been added successfully.')

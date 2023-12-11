@@ -14,3 +14,5 @@ def remove_item():
 
     # Write the modified DataFrame back to the CSV file
     df.to_csv(filename, index=False)
+
+    print('Data has been removed successfully.')
