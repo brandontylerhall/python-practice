@@ -1,6 +1,62 @@
-def length_convert():
-    valid_units = {'1', '2', '3', '4', '5', '6', '7', 'mi', 'km', 'ft', 'm', 'in', 'cm'}
+valid_units = {'1', '2', '3', '4', '5', '6', '7', 'mi', 'km', 'ft', 'm', 'in', 'cm'}
 
+unit_names = {
+    '2': 'kilometers',
+    '3': 'feet',
+    '4': 'meters',
+    '': 'inches',
+    '5': 'centimeters',
+    '1': 'miles'
+}
+
+result = None
+
+
+def miles_convert():
+    global result
+    mi = int(input("How many miles are we converting:\n> "))
+    mi_to = input('What are we converting to:\n'
+                  '1. Kilometers (km)\n'
+                  '2. Feet (ft)\n'
+                  '3. Meters (m)\n'
+                  '4. Inches (in)\n'
+                  '5. Centimeters (cm)\n'
+                  '> ')
+    match mi_to:
+        case '1' | 'km':
+            result = round(mi * 1.609)
+        case '2' | 'ft':
+            result = round(mi * 5280)
+        case '3' | 'm':
+            result = round(mi * 1609.34)
+        case '4' | 'in':
+            result = round(mi * 63360)
+        case '5' | 'cm':
+            result = round(mi * 160934)
+    print(f'You converted {mi} miles to {result} {mi_to}')
+
+
+def kilometers_convert():
+    pass
+
+
+def feet_convert():
+    pass
+
+
+def meters_convert():
+    pass
+
+
+def inches_convert():
+    pass
+
+
+def centimeters_convert():
+    pass
+
+
+def length_convert():
     while True:
         print('What do you want to convert:\n'
               '1. Miles (mi)\n'
@@ -15,7 +71,7 @@ def length_convert():
         if unit in valid_units:
             match unit:
                 case '1' | 'mi':
-                    pass
+                    miles_convert()
                 case '2' | 'km':
                     pass
                 case '3' | 'ft':
@@ -30,3 +86,6 @@ def length_convert():
                     break
         else:
             print('Invalid input. Please enter a valid number or unit.')
+
+
+length_convert()
