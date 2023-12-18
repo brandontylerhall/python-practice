@@ -1,10 +1,11 @@
 from temp_convert import temp_convert
 from length_convert import length_convert
+from weight_convert import weight_convert
 
 
 def main():
     while True:
-        inp = input('What do you want to convert:\n'
+        inp = input('\nWhat do you want to convert:\n'
                     '1. Temperature\n'
                     '2. Weight\n'
                     '3. Length\n'
@@ -17,6 +18,9 @@ def main():
             case '2':
                 print()
                 length_convert()
+            case '3':
+                print()
+                weight_convert()
             case '4':
                 exit()
 
