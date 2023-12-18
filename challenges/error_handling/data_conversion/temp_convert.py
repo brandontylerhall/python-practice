@@ -31,7 +31,6 @@ def temp_convert():
             case 2:
                 c_to_f()
             case 3:
-                print()
                 break
             case 4:
                 exit()
