@@ -198,7 +198,8 @@ def length_convert():
               '4. Meters (m)\n'
               '5. Inches (in)\n'
               '6. Centimeters (cm)\n'
-              '7. Main menu')
+              '7. Main menu\n'
+              '8. Quit')
         unit = input('> ')
 
         if unit in valid_units:
@@ -217,5 +218,7 @@ def length_convert():
                     centimeters_convert()
                 case '7':
                     break
+                case '8':
+                    exit()
         else:
             print('Invalid input. Please enter a valid number or unit.\n')
