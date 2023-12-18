@@ -1,14 +1,5 @@
 valid_units = {'1', '2', '3', '4', '5', '6', '7', 'mi', 'km', 'ft', 'm', 'in', 'cm'}
 
-unit_names = {
-    '2': 'kilometers',
-    '3': 'feet',
-    '4': 'meters',
-    '': 'inches',
-    '5': 'centimeters',
-    '1': 'miles'
-}
-
 result = None
 
 
