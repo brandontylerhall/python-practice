@@ -13,22 +13,25 @@ def miles_convert():
                   '4. Inches (in)\n'
                   '5. Centimeters (cm)\n'
                   '> ')
-    match mi_to:
-        case '1' | 'km':
-            result = (mi * 1.609)
-            print(f'\nYou converted {mi} miles to {result:,.2f} kilometers.\n')
-        case '2' | 'ft':
-            result = (mi * 5280)
-            print(f'\nYou converted {mi} miles to {result:,.2f} feet.\n')
-        case '3' | 'm':
-            result = (mi * 1609.34)
-            print(f'\nYou converted {mi} miles to {result:,.2f} meters.\n')
-        case '4' | 'in':
-            result = (mi * 63360)
-            print(f'\nYou converted {mi} miles to {result:,.2f} inches.\n')
-        case '5' | 'cm':
-            result = (mi * 160934)
-            print(f'\nYou converted {mi} miles to {result:,.2f} centimeters.\n')
+    if mi_to in valid_units:
+        match mi_to:
+            case '1' | 'km':
+                result = (mi * 1.609)
+                print(f'\nYou converted {mi} miles to {result:,.2f} kilometers.\n')
+            case '2' | 'ft':
+                result = (mi * 5280)
+                print(f'\nYou converted {mi} miles to {result:,.2f} feet.\n')
+            case '3' | 'm':
+                result = (mi * 1609.34)
+                print(f'\nYou converted {mi} miles to {result:,.2f} meters.\n')
+            case '4' | 'in':
+                result = (mi * 63360)
+                print(f'\nYou converted {mi} miles to {result:,.2f} inches.\n')
+            case '5' | 'cm':
+                result = (mi * 160934)
+                print(f'\nYou converted {mi} miles to {result:,.2f} centimeters.\n')
+    else:
+        print('\nInvalid option. Please try again.\n')
 
 
 def kilometers_convert():
@@ -41,22 +44,25 @@ def kilometers_convert():
                   '4. Inches (in)\n'
                   '5. Centimeters (cm)\n'
                   '> ')
-    match km_to:
-        case '1' | 'mi':
-            result = (km * 0.621)
-            print(f'\nYou converted {km} kilometers to {result:,.2f} miles.\n')
-        case '2' | 'ft':
-            result = (km * 3280.84)
-            print(f'\nYou converted {km} kilometers to {result:,.2f} feet.\n')
-        case '3' | 'm':
-            result = (km * 1000)
-            print(f'\nYou converted {km} kilometers to {result:,.2f} meters.\n')
-        case '4' | 'in':
-            result = (km * 39370.1)
-            print(f'\nYou converted {km} kilometers to {result:,.2f} inches.\n')
-        case '5' | 'cm':
-            result = (km * 10000)
-            print(f'\nYou converted {km} kilometers to {result:,.2f} centimeters.\n')
+    if km_to in valid_units:
+        match km_to:
+            case '1' | 'mi':
+                result = (km * 0.621)
+                print(f'\nYou converted {km} kilometers to {result:,.2f} miles.\n')
+            case '2' | 'ft':
+                result = (km * 3280.84)
+                print(f'\nYou converted {km} kilometers to {result:,.2f} feet.\n')
+            case '3' | 'm':
+                result = (km * 1000)
+                print(f'\nYou converted {km} kilometers to {result:,.2f} meters.\n')
+            case '4' | 'in':
+                result = (km * 39370.1)
+                print(f'\nYou converted {km} kilometers to {result:,.2f} inches.\n')
+            case '5' | 'cm':
+                result = (km * 10000)
+                print(f'\nYou converted {km} kilometers to {result:,.2f} centimeters.\n')
+    else:
+        print('\nInvalid option. Please try again.\n')
 
 
 def feet_convert():
@@ -69,22 +75,25 @@ def feet_convert():
                   '4. Inches (in)\n'
                   '5. Centimeters (cm)\n'
                   '> ')
-    match ft_to:
-        case '1' | 'mi':
-            result = (ft / 5280)
-            print(f'\nYou converted {ft} feet to {result:,.2f} miles.\n')
-        case '2' | 'km':
-            result = (ft / 3281)
-            print(f'\nYou converted {ft} feet to {result:,.2f} kilometers.\n')
-        case '3' | 'm':
-            result = (ft / 3.281)
-            print(f'\nYou converted {ft} feet to {result:,.2f} meters.\n')
-        case '4' | 'in':
-            result = (ft * 12)
-            print(f'\nYou converted {ft} feet to {result:,.2f} inches.\n')
-        case '5' | 'cm':
-            result = (ft * 30.48)
-            print(f'\nYou converted {ft} feet to {result:,.2f} centimeters.\n')
+    if ft_to in valid_units:
+        match ft_to:
+            case '1' | 'mi':
+                result = (ft / 5280)
+                print(f'\nYou converted {ft} feet to {result:,.2f} miles.\n')
+            case '2' | 'km':
+                result = (ft / 3281)
+                print(f'\nYou converted {ft} feet to {result:,.2f} kilometers.\n')
+            case '3' | 'm':
+                result = (ft / 3.281)
+                print(f'\nYou converted {ft} feet to {result:,.2f} meters.\n')
+            case '4' | 'in':
+                result = (ft * 12)
+                print(f'\nYou converted {ft} feet to {result:,.2f} inches.\n')
+            case '5' | 'cm':
+                result = (ft * 30.48)
+                print(f'\nYou converted {ft} feet to {result:,.2f} centimeters.\n')
+    else:
+        print('\nInvalid option. Please try again.\n')
 
 
 def meters_convert():
@@ -97,22 +106,25 @@ def meters_convert():
                  '4. Inches (in)\n'
                  '5. Centimeters (cm)\n'
                  '> ')
-    match m_to:
-        case '1' | 'mi':
-            result = (m / 1609)
-            print(f'\nYou converted {m} meters to {result:,.2f} miles.\n')
-        case '2' | 'km':
-            result = (m / 1000)
-            print(f'\nYou converted {m} meters to {result:,.2f} kilometers.\n')
-        case '3' | 'ft':
-            result = (m * 3.281)
-            print(f'\nYou converted {m} meters to {result:,.2f} feet.\n')
-        case '4' | 'in':
-            result = (m * 39.37)
-            print(f'\nYou converted {m} meters to {result:,.2f} inches.\n')
-        case '5' | 'cm':
-            result = (m * 100)
-            print(f'\nYou converted {m} meters to {result:,.2f} centimeters.\n')
+    if m_to in valid_units:
+        match m_to:
+            case '1' | 'mi':
+                result = (m / 1609)
+                print(f'\nYou converted {m} meters to {result:,.2f} miles.\n')
+            case '2' | 'km':
+                result = (m / 1000)
+                print(f'\nYou converted {m} meters to {result:,.2f} kilometers.\n')
+            case '3' | 'ft':
+                result = (m * 3.281)
+                print(f'\nYou converted {m} meters to {result:,.2f} feet.\n')
+            case '4' | 'in':
+                result = (m * 39.37)
+                print(f'\nYou converted {m} meters to {result:,.2f} inches.\n')
+            case '5' | 'cm':
+                result = (m * 100)
+                print(f'\nYou converted {m} meters to {result:,.2f} centimeters.\n')
+    else:
+        print('\nInvalid option. Please try again.\n')
 
 
 def inches_convert():
@@ -125,22 +137,25 @@ def inches_convert():
                     '4. Meters (m)\n'
                     '5. Centimeters (cm)\n'
                     '> ')
-    match inch_to:
-        case '1' | 'mi':
-            result = (inch * 63360)
-            print(f'\nYou converted {inch} inches to {result:,.2f} miles.\n')
-        case '2' | 'km':
-            result = (inch / 39370)
-            print(f'\nYou converted {inch} inches to {result:,.2f} kilometers.\n')
-        case '3' | 'ft':
-            result = (inch * 12)
-            print(f'\nYou converted {inch} inches to {result:,.2f} feet.\n')
-        case '4' | 'm':
-            result = (inch / 39.37)
-            print(f'\nYou converted {inch} inches to {result:,.2f} meters.\n')
-        case '5' | 'cm':
-            result = (inch * 2.54)
-            print(f'\nYou converted {inch} inches to {result:,.2f} centimeters.\n')
+    if inch_to in valid_units:
+        match inch_to:
+            case '1' | 'mi':
+                result = (inch * 63360)
+                print(f'\nYou converted {inch} inches to {result:,.2f} miles.\n')
+            case '2' | 'km':
+                result = (inch / 39370)
+                print(f'\nYou converted {inch} inches to {result:,.2f} kilometers.\n')
+            case '3' | 'ft':
+                result = (inch * 12)
+                print(f'\nYou converted {inch} inches to {result:,.2f} feet.\n')
+            case '4' | 'm':
+                result = (inch / 39.37)
+                print(f'\nYou converted {inch} inches to {result:,.2f} meters.\n')
+            case '5' | 'cm':
+                result = (inch * 2.54)
+                print(f'\nYou converted {inch} inches to {result:,.2f} centimeters.\n')
+    else:
+        print('\nInvalid option. Please try again.\n')
 
 
 def centimeters_convert():
@@ -153,22 +168,25 @@ def centimeters_convert():
                   '4. Meters (m)\n'
                   '5. Inches (in)\n'
                   '> ')
-    match cm_to:
-        case '1' | 'mi':
-            result = (cm / 160900)
-            print(f'\nYou converted {cm} centimeters to {result:,.2f} miles.\n')
-        case '2' | 'km':
-            result = (cm / 100000)
-            print(f'\nYou converted {cm} centimeters to {result:,.2f} kilometers.\n')
-        case '3' | 'ft':
-            result = (cm / 30.48)
-            print(f'\nYou converted {cm} centimeters to {result:,.2f} feet.\n')
-        case '4' | 'm':
-            result = (cm / 100)
-            print(f'\nYou converted {cm} centimeters to {result:,.2f} meters.\n')
-        case '5' | 'in':
-            result = (cm / 2.54)
-            print(f'\nYou converted {cm} centimeters to {result:,.2f} inches.\n')
+    if cm_to in valid_units:
+        match cm_to:
+            case '1' | 'mi':
+                result = (cm / 160900)
+                print(f'\nYou converted {cm} centimeters to {result:,.2f} miles.\n')
+            case '2' | 'km':
+                result = (cm / 100000)
+                print(f'\nYou converted {cm} centimeters to {result:,.2f} kilometers.\n')
+            case '3' | 'ft':
+                result = (cm / 30.48)
+                print(f'\nYou converted {cm} centimeters to {result:,.2f} feet.\n')
+            case '4' | 'm':
+                result = (cm / 100)
+                print(f'\nYou converted {cm} centimeters to {result:,.2f} meters.\n')
+            case '5' | 'in':
+                result = (cm / 2.54)
+                print(f'\nYou converted {cm} centimeters to {result:,.2f} inches.\n')
+    else:
+        print('\nInvalid option. Please try again.\n')
 
 
 def length_convert():
