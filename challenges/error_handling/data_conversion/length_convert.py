@@ -201,6 +201,3 @@ def length_convert():
                     break
         else:
             print('Invalid input. Please enter a valid number or unit.\n')
-
-
-length_convert()
